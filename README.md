@@ -1,9 +1,7 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![Docker Stars](https://img.shields.io/docker/stars/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![](https://badge.imagelayers.io/wurstmeister/kafka:latest.svg)](https://imagelayers.io/?images=wurstmeister/kafka:latest)
-
 kafka-docker
 ============
+
+This is a fork of wurstmeister/kafka-docker which includes the [confluent schema-registry](https://github.com/confluentinc/schema-registry) using the [Kingcontext docker images](http://www.kingcontext.com/2016/02/06/confluent2-docker-images/)
 
 Dockerfile for [Apache Kafka](http://kafka.apache.org/)
 

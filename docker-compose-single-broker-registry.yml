@@ -1,0 +1,27 @@
+zookeeper:
+  image: wurstmeister/zookeeper
+  cpu_shares: 100
+  mem_limit: 262144000
+  ports:
+    - "2181:2181"
+
+kafka:
+  image: .
+  cpu_shares: 100
+  mem_limit: 262144000
+  ports:
+    - "9092:9092"
+  links:
+    - zookeeper
+  # environment:
+  #   HOSTNAME_COMMAND: "route -n | awk '/UG[ \t]/{print $$2}'"
+
+registry:
+  image: kingcontext/confluent-schema-registry:confluent2
+  cpu_shares: 100
+  mem_limit: 262144000
+  ports:
+    - "8081:8081"
+  links:
+    - kafka
+    - zookeeper
